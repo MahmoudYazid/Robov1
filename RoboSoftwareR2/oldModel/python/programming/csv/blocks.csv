@@ -1,0 +1,27 @@
+nameofsymp,effector,state,place,type_effector
+water,paracetamol,-1,nose,drug
+water,cold,1,nose,disease
+water,vomiting,1,mouth,disease
+water,metoclopramide,-1,mouth,drug
+pigmentation,rash,1,hand,disease
+pigmentation,antihistamine,-1,hand,drug
+eye,eyecontract,1,eye,disease
+eye,ach,-1,eye,drug
+move,convulsion,1,body,disease
+move,depakin,-1,body,drug
+BP,ARRETHMIA,1,heart,disease
+BP,na_chennel_blocker,-1,heart,drug
+respiration,hyperrespiration,1,lung,disease
+respiration,benzodiazepine,-1,lung,drug
+respiration,respiratoryfalure,-1,lung,disease
+respiration,doxapram,1,lung,drug
+BP,heart falure,-1,heart,disease
+BP,digoxin,1,heart,drug
+eye,eye_dilute,-1,eye,disease
+eye,eye_contrct_drug,1,eye,drug
+blood,vomiting_blood,1,mouth,disease
+blood,vomiting_blood_drug,-1,mouth,drug
+blood,blood_nose_drug,-1,nose,drug
+blood,blood_nose_disease,1,nose,disease
+move,akathesia,-1,body,disease
+move,akathesia_drug,1,body,drug
