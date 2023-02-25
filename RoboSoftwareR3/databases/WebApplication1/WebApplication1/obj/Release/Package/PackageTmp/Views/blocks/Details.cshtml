@@ -1,0 +1,66 @@
+﻿@model WebApplication1.Models.block
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>block</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.SympId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SympId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.effectorName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.effectorName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.place)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.place)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.type_effector)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.type_effector)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EffectorId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EffectorId)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.blockId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

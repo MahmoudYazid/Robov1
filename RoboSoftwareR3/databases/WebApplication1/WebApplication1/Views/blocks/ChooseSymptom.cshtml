@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WebApplication1.Models.Qdb>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChooseSymptom</title>
+</head>
+<body>
+    <p>
+        ChooseSymptom
+    </p>
+    @Html.ActionLink("Qdbs", "Index", "Qdbs")
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nameofsymp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.answer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.question)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KindId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nameofsymp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.answer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.question)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.state)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KindId)
+                </td>
+                <td>
+                    @Html.ActionLink("Select", "ChooseOrgan", new { SympId = item.SymptomId }) |
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+SympId,effectorName,place,type_effector,EffectorId,blockId
+45,cold,head,disease,0,1
+42,cold,nose,disease,0,2
+6,cold,head,disease,0,3
+46,paracetamol,head,drug,23,4
+44,paracetamol,nose,drug,23,5
+7,paracetamol,head,drug,23,6
+3,corticosteroid,nose,drug,24,7
+5,asthma,nose,disease,3,8
+17,mydriasis,eye,disease,1,9
+15,oxycodone,eye,drug,25,10
+36,hypertension,head,disease,4,11
+6,hypertension,head,disease,4,12
+37,Captopril,head,drug,26,13
+7,Captopril,head,drug,26,14
+15,myosis,eye,disease,2,15
+17,Cocaine,eye,drug,27,16
+37,hypotension,head,disease,5,17
+6,hypotension,head,disease,5,18
+7,midodrine,head,drug,28,19
+37,midodrine,head,drug,28,20
+41, IV fluids,mouth,drug,29,21
+39,bloody vomiting,mouth,disease,6,22
+41,diphenhydramine,nose,drug,40,23
+39,bloody Rhinorrhea,nose,disease,7,24
+34,insulin,abdominal,drug,31,25
+33,hyperglycemia,abdominal,disease,9,26
+33,glucose,abdominal,drug,32,27
+34,hypoglycemia,abdominal,disease,10,28
+11,valproate,abdominal,drug,33,29
+9,convulsion,abdominal,disease,11,30
+44,dimenhydrinate,mouth,drug,34,31
+42,vomiting,mouth,disease,12,32
+22,sildenafil citrate,abdominal,drug,35,33
+21,sexual dysfunction,abdominal,disease,13,34
+14,insomnia,eye,disease,14,35
+12,temazepam,eye,drug,36,36
+12,Hypersomnia,eye,disease,15,37
+14,modafinil,eye,drug,37,38
+42,Rhinorrhea,nose,disease,16,39
+44,phenylephrine,nose,drug,38,40
+3,Hyperreactive airway,abdominal,disease,17,41
+5,Benzodiazepines,abdominal,drug,39,42
+18,hypersenstivity,abdominal,disease,18,43
+19,diphenhydramine,abdominal,drug,40,44
+25,constipation,abdominal,disease,19,45
+24,bisacodyl,abdominal,drug,41,46
+24,diarrhea,abdominal,disease,20,47
+25,loperamide,abdominal,drug,42,48
+27,increase urenation,abdominal,disease,21,49
+28,tolterodine,abdominal,drug,43,50
+28,decrease urination,abdominal,disease,22,51
+27,Darifenacin,abdominal,drug,44,52
