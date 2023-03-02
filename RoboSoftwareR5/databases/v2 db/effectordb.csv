@@ -1,0 +1,46 @@
+Id,effectorName,effectorType
+0,cold,disease
+1,mydriasis,disease
+2,myosis,disease
+3,asthma,disease
+4,hypertension,disease
+5,hypotension,disease
+6,bloody vomiting,disease
+7,bloody Rhinorrhea,disease
+8,hyperthermia,disease
+9,hyperglycemia,disease
+10,hypoglycemia,disease
+11,convulsion,disease
+12,vomiting,disease
+13,sexual dysfunction,disease
+14,insomnia,disease
+15,Hypersomnia,disease
+16,Rhinorrhea,disease
+17,Hyperreactive airway,disease
+18,hypersenstivity,disease
+19,constipation,disease
+20,diarrhea,disease
+21,increase urenation,disease
+22,decrease urination,disease
+23,paracetamol,drug
+24,corticosteroid,drug
+25,oxycodone,drug
+26,Captopril,drug
+27,Cocaine,drug
+28,midodrine,drug
+29, IV fluids,drug
+30,diphenhydramine,drug
+31,insulin,drug
+32,glucose,drug
+33,valproate,drug
+34,dimenhydrinate,drug
+35,sildenafil citrate,drug
+36,temazepam,drug
+37,modafinil,drug
+38,phenylephrine,drug
+39,Benzodiazepines,drug
+40,diphenhydramine,drug
+41,bisacodyl,drug
+42,loperamide,drug
+43,tolterodine,drug
+44,Darifenacin,drug

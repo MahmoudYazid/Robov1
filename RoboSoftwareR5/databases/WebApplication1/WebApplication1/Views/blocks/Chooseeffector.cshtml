@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication1.Models.EffectorsDb>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Chooseeffector</title>
+</head>
+<body>
+    <p>
+        Chooseeffector
+    </p>
+    @Html.ActionLink("Qdbs", "Index", "Qdbs")
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.effectorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.effectorType)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.effectorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.effectorType)
+                </td>
+                <td>
+                    @Html.ActionLink("select", "Create", new { OrganName = Request.QueryString["OrganName"], SympId = Request.QueryString["SympId"], EffectorNameParam = item.effectorName, EffectoridParam = item.Id, EffectorTypeParam = item.effectorType })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

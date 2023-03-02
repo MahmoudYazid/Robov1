@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RoboDbMainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="blocks">
+          <Key>
+            <PropertyRef Name="blockId" />
+          </Key>
+          <Property Name="SympId" Type="int" Nullable="false" />
+          <Property Name="effectorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="place" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="type_effector" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EffectorId" Type="int" Nullable="false" />
+          <Property Name="blockId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EffectorsDb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="effectorName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="effectorType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ODB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="OrganName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Qdb">
+          <Key>
+            <PropertyRef Name="SymptomId" />
+          </Key>
+          <Property Name="nameofsymp" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="answer" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="question" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="state" Type="smallint" Nullable="false" />
+          <Property Name="SymptomId" Type="int" Nullable="false" />
+          <Property Name="KindId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RoboDbMainModelStoreContainer">
+          <EntitySet Name="blocks" EntityType="Self.blocks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EffectorsDb" EntityType="Self.EffectorsDb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ODB" EntityType="Self.ODB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Qdb" EntityType="Self.Qdb" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RoboDbMainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="block">
+          <Key>
+            <PropertyRef Name="blockId" />
+          </Key>
+          <Property Name="SympId" Type="Int32" Nullable="false" />
+          <Property Name="effectorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="place" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type_effector" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EffectorId" Type="Int32" Nullable="false" />
+          <Property Name="blockId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EffectorsDb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="effectorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="effectorType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ODB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="OrganName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Qdb">
+          <Key>
+            <PropertyRef Name="SymptomId" />
+          </Key>
+          <Property Name="nameofsymp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="answer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="question" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="state" Type="Int16" Nullable="false" />
+          <Property Name="SymptomId" Type="Int32" Nullable="false" />
+          <Property Name="KindId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RoboDbMainEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="blocks" EntityType="Self.block" />
+          <EntitySet Name="EffectorsDbs" EntityType="Self.EffectorsDb" />
+          <EntitySet Name="ODBs" EntityType="Self.ODB" />
+          <EntitySet Name="Qdbs" EntityType="Self.Qdb" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RoboDbMainModelStoreContainer" CdmEntityContainer="RoboDbMainEntities">
+          <EntitySetMapping Name="blocks">
+            <EntityTypeMapping TypeName="RoboDbMainModel.block">
+              <MappingFragment StoreEntitySet="blocks">
+                <ScalarProperty Name="SympId" ColumnName="SympId" />
+                <ScalarProperty Name="effectorName" ColumnName="effectorName" />
+                <ScalarProperty Name="place" ColumnName="place" />
+                <ScalarProperty Name="type_effector" ColumnName="type_effector" />
+                <ScalarProperty Name="EffectorId" ColumnName="EffectorId" />
+                <ScalarProperty Name="blockId" ColumnName="blockId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EffectorsDbs">
+            <EntityTypeMapping TypeName="RoboDbMainModel.EffectorsDb">
+              <MappingFragment StoreEntitySet="EffectorsDb">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="effectorName" ColumnName="effectorName" />
+                <ScalarProperty Name="effectorType" ColumnName="effectorType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ODBs">
+            <EntityTypeMapping TypeName="RoboDbMainModel.ODB">
+              <MappingFragment StoreEntitySet="ODB">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="OrganName" ColumnName="OrganName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qdbs">
+            <EntityTypeMapping TypeName="RoboDbMainModel.Qdb">
+              <MappingFragment StoreEntitySet="Qdb">
+                <ScalarProperty Name="nameofsymp" ColumnName="nameofsymp" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="SymptomId" ColumnName="SymptomId" />
+                <ScalarProperty Name="KindId" ColumnName="KindId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
