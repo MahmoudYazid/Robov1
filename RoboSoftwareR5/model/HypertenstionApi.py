@@ -37,8 +37,10 @@ def update_hyper_bp(frame):
 
 
 def HypertenstionMainApi():
+    for item in InstanseQDB.find({"nameofsymp": "BP", "state": "1"}):
+        if len([CheckExist for CheckExist in InstanseADB.find({"state": "1", "KindId": item['KindId']})]) > 0:
 
-    animation = FuncAnimation(fig, update_hyper_bp, interval=100)
-    plt.show()
+            animation = FuncAnimation(fig, update_hyper_bp, interval=100)
+            plt.show()
 
 

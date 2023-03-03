@@ -41,7 +41,7 @@ def GetAnswerofKindandStateAndMakeText():
             {"state": item['state'], "KindId":item['KindId']})][0]
         spilittedAnswer=answer_[0].split()
         organ_ = answer_[1]
-        # gettedAnswer.append(answer_)
+       
         if 'no' in spilittedAnswer:
 
            spilittedAnswer[spilittedAnswer.index("no")]=""
@@ -60,7 +60,10 @@ def GetAnswerofKindandStateAndMakeText():
             
             spilittedAnswer[int(spilittedAnswer.index("((organ))"))] = "{}".format(organ_)
         spilittedAnswer.append(",...")
-        gettedAnswer.append(makeArrAstring(spilittedAnswer))
+        
+        
+        if makeArrAstring(spilittedAnswer) not in gettedAnswer:
+            gettedAnswer.append(makeArrAstring(spilittedAnswer))
         
     if len(gettedAnswer)>0:  
         return makeArrAstring(gettedAnswer)

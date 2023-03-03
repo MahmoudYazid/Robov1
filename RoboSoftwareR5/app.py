@@ -8,7 +8,7 @@ from datetime import datetime
 from model.SoundApi import *
 from model.Variable import *
 from model.AnalysisApi import *
-
+from model.ShowMeSympApi import *
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -16,7 +16,8 @@ class Ui_MainWindow(object):
         MainWindow.resize(955, 380)
         MainWindow.setMinimumSize(QtCore.QSize(955, 380))
         MainWindow.setMaximumSize(QtCore.QSize(955, 380))
-        MainWindow.setStyleSheet("background-color: rgb(83, 83, 80);\n"
+        MainWindow.setStyleSheet("QLabel{font-family: 'Helvetica';}"
+            "background-color: rgb(83, 83, 80);\n"
                                  "background-color: rgb(255, 255, 255);")
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -28,14 +29,14 @@ class Ui_MainWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.AnalysisBtm = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.AnalysisBtm.setStyleSheet("font: 8pt \"Mongolian Baiti\";\n"
+        self.AnalysisBtm.setStyleSheet(
                                        "\n"
                                        "background-color: rgb(119, 204, 233);")
         self.AnalysisBtm.pressed.connect(self.F_AnalysisBtm)
         self.AnalysisBtm.setObjectName("AnalysisBtm")
         self.gridLayout.addWidget(self.AnalysisBtm, 7, 0, 1, 1)
         self.pushBtm = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.pushBtm.setStyleSheet("font: 8pt \"Mongolian Baiti\";\n"
+        self.pushBtm.setStyleSheet(
                                    "\n"
                                    "background-color: rgb(119, 204, 233);")
         self.pushBtm.setObjectName("pushBtm")
@@ -50,7 +51,7 @@ class Ui_MainWindow(object):
         self.EffectorComboBox.addItems(QlistUniqueValue)
         self.gridLayout.addWidget(self.EffectorComboBox, 2, 0, 1, 1)
         self.resetBtm = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.resetBtm.setStyleSheet("font: 8pt \"Mongolian Baiti\";\n"
+        self.resetBtm.setStyleSheet(
                                     "\n"
                                     "background-color: rgb(119, 204, 233);")
         self.resetBtm.setObjectName("resetBtm")
@@ -63,16 +64,17 @@ class Ui_MainWindow(object):
         self.ordersScreenList.setObjectName("ordersScreenList")
         self.gridLayout.addWidget(self.ordersScreenList, 0, 0, 2, 1)
         self.tellmeBtm = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.tellmeBtm.setStyleSheet("font: 8pt \"Mongolian Baiti\";\n"
+        self.tellmeBtm.setStyleSheet(
                                      "\n"
                                      "background-color: rgb(119, 204, 233);")
         self.tellmeBtm.setObjectName("tellmeBtm")
         self.tellmeBtm.pressed.connect(self.F_TellMeBtm)
         self.gridLayout.addWidget(self.tellmeBtm, 4, 0, 1, 1)
         self.ShowmeBtm = QtWidgets.QPushButton(self.gridLayoutWidget)
-        self.ShowmeBtm.setStyleSheet("font: 8pt \"Mongolian Baiti\";\n"
+        self.ShowmeBtm.setStyleSheet(
                                      "\n"
                                      "background-color: rgb(119, 204, 233);")
+        self.ShowmeBtm.pressed.connect(self.F_ShowMeBtm)
         self.ShowmeBtm.setObjectName("ShowmeBtm")
         self.gridLayout.addWidget(self.ShowmeBtm, 6, 0, 1, 1)
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -119,6 +121,12 @@ class Ui_MainWindow(object):
         return 0
     
     def F_ShowMeBtm(self): 
+        self.ordersScreenList.addItem(
+            " {} Show me the Symptom Order".format(datetime.now()))
+        self.ordersScreenList.addItem(
+            " {} Show me the Symptom Order Done".format(datetime.now()))
+     
+        F_ShowMeTheSym()
         return 0
     
     def F_TellMeBtm(self): 
