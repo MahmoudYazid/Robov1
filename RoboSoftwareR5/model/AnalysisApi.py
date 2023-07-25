@@ -69,6 +69,12 @@ def F_BloodPressureAnalysis(self):
 
 		
 
+
+
+
+
+
+
 def AutoCheck(self):
 	self.AnalysisScreenList.clear()
 
