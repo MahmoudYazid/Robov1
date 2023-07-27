@@ -127,6 +127,8 @@ background-color: rgb(119, 204, 233);</string>
      </item>
     </layout>
    </widget>
+
+   
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>

@@ -34,11 +34,19 @@ def makeArrAstring(arr):
 
 #-> get answer of (kind , state) => add to text => delete yes,no => speak 
 def GetAnswerofKindandStateAndMakeText():
-
+    print('we are here')
+    InstanseADB = GeneralConnection.execute("SELECT * FROM ADB ")
     gettedAnswer=[]
-    for item in InstanseADB.find():
-        answer_ = [[answer['answer'],item['place']] for answer in InstanseQDB.find(
-            {"state": item['state'], "KindId":item['KindId']})][0]
+    for item in InstanseADB:
+
+        Checkexistnece = GeneralConnection.execute(
+            "SELECT * FROM QDB WHERE state='{}' AND KindId='{}' ".format(item[TablesSchima['ADB']['state']], item[TablesSchima['ADB']['KindId']]))
+
+    
+
+        answer_ = [[answer[TablesSchima['QDB']['answer']], item[TablesSchima['ADB']['place']]]
+                   for answer in Checkexistnece][0]
+        print(answer_)
         spilittedAnswer=answer_[0].split()
         organ_ = answer_[1]
        

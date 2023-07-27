@@ -1,0 +1,30 @@
+[
+ {
+   "Id": 0,
+   "OrganName": "nose"
+ },
+ {
+   "Id": 1,
+   "OrganName": "mouth"
+ },
+ {
+   "Id": 2,
+   "OrganName": "abdominal"
+ },
+ {
+   "Id": 3,
+   "OrganName": "head"
+ },
+ {
+   "Id": 4,
+   "OrganName": "hand"
+ },
+ {
+   "Id": 5,
+   "OrganName": "leg"
+ },
+ {
+   "Id": 6,
+   "OrganName": "eye"
+ }
+]

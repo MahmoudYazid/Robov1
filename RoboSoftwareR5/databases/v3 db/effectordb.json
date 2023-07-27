@@ -1,0 +1,227 @@
+[
+ {
+   "Id": 0,
+   "effectorName": "cold",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 1,
+   "effectorName": "mydriasis",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 2,
+   "effectorName": "myosis",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 3,
+   "effectorName": "asthma",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 4,
+   "effectorName": "hypertension",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 5,
+   "effectorName": "hypotension",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 6,
+   "effectorName": "bloody vomiting",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 7,
+   "effectorName": "bloody Rhinorrhea",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 8,
+   "effectorName": "hyperthermia",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 9,
+   "effectorName": "hyperglycemia",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 10,
+   "effectorName": "hypoglycemia",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 11,
+   "effectorName": "convulsion",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 12,
+   "effectorName": "vomiting",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 13,
+   "effectorName": "sexual dysfunction",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 14,
+   "effectorName": "insomnia",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 15,
+   "effectorName": "Hypersomnia",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 16,
+   "effectorName": "Rhinorrhea",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 17,
+   "effectorName": "Hyperreactive airway",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 18,
+   "effectorName": "hypersenstivity",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 19,
+   "effectorName": "constipation",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 20,
+   "effectorName": "diarrhea",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 21,
+   "effectorName": "increase urenation",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 22,
+   "effectorName": "decrease urination",
+   "effectorType": "disease"
+ },
+ {
+   "Id": 23,
+   "effectorName": "paracetamol",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 24,
+   "effectorName": "corticosteroid",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 25,
+   "effectorName": "oxycodone",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 26,
+   "effectorName": "Captopril",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 27,
+   "effectorName": "Cocaine",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 28,
+   "effectorName": "midodrine",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 29,
+   "effectorName": " IV fluids",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 30,
+   "effectorName": "diphenhydramine",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 31,
+   "effectorName": "insulin",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 32,
+   "effectorName": "glucose",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 33,
+   "effectorName": "valproate",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 34,
+   "effectorName": "dimenhydrinate",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 35,
+   "effectorName": "sildenafil citrate",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 36,
+   "effectorName": "temazepam",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 37,
+   "effectorName": "modafinil",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 38,
+   "effectorName": "phenylephrine",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 39,
+   "effectorName": "Benzodiazepines",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 40,
+   "effectorName": "diphenhydramine",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 41,
+   "effectorName": "bisacodyl",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 42,
+   "effectorName": "loperamide",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 43,
+   "effectorName": "tolterodine",
+   "effectorType": "drug"
+ },
+ {
+   "Id": 44,
+   "effectorName": "Darifenacin",
+   "effectorType": "drug"
+ }
+]

@@ -1,10 +1,16 @@
 from model.ModulesImportApi import *
 from model.PortsConfigApi import *
 from model.config import *
-
+from model.DbContext import *
 def F_SlowMoveApi():
-    for item in InstanseQDB.find({"nameofsymp": "move", "state": "-1"}):
-        if len([CheckExist for CheckExist in InstanseADB.find({"state": "-1", "KindId": item['KindId']})]) > 0:
+    InstanseQDB = GeneralConnection.execute(
+        "SELECT * FROM QDB WHERE nameofsymp='move' AND state='-1' ")
+
+    for item in InstanseQDB:
+        InstanseADB = GeneralConnection.execute(
+            "SELECT * FROM ADB WHERE state='-1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+
+        if len([CheckExist for CheckExist in InstanseADB]) > 0:
 
             for x in range(1, 6):
                 convulsion_motor.start(PwmStart["start"])
@@ -22,8 +28,15 @@ def F_SlowMoveApi():
     
  
 def F_FastMoveApi():
-    for item in InstanseQDB.find({"nameofsymp": "move", "state": "1"}):
-        if len([CheckExist for CheckExist in InstanseADB.find({"state": "1", "KindId": item['KindId']})]) > 0:
+    InstanseQDB = GeneralConnection.execute(
+        "SELECT * FROM QDB WHERE nameofsymp='move' AND state='1' ")
+
+
+    for item in InstanseQDB:
+        InstanseADB = GeneralConnection.execute(
+            "SELECT * FROM ADB WHERE state='1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+
+        if len([CheckExist for CheckExist in InstanseADB]) > 0:
             convulsion_motor.start(PwmStart["start"])
             for x in range(1, 6):
                 

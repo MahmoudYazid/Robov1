@@ -1,10 +1,16 @@
 from model.ModulesImportApi import *
 from model.PortsConfigApi import *
 from model.config import *
-
+from model.DbContext import *
 def F_NasalWaterFluidApi():
-    for item in InstanseQDB.find({"nameofsymp": "water", "state": "1"}):
-        if len([CheckExist for CheckExist in InstanseADB.find({"state": "1", "KindId": item['KindId'], "place":"nose"})]) > 0:
+    InstanseQDB = GeneralConnection.execute(
+        "SELECT * FROM QDB WHERE nameofsymp='water' AND state='1' ")
+
+    for item in InstanseQDB:
+        InstanseADB = GeneralConnection.execute(
+            "SELECT * FROM ADB WHERE state='1' AND KindId='{}' AND place='nose' ".format(item[TablesSchima['QDB']['KindId']]))
+
+        if len([CheckExist for CheckExist in InstanseADB]) > 0:
             for x in range(1, 6):
                 GPIO.output(PortsConfig["water_nose_pin"], 1)
                 sleep(sleepConfigTimer["BloodWater_MotorDelay"])
@@ -14,8 +20,15 @@ def F_NasalWaterFluidApi():
 
 
 def F_MouthWaterFluidApi():
-    for item in InstanseQDB.find({"nameofsymp": "water", "state": "1"}):
-        if len([CheckExist for CheckExist in InstanseADB.find({"state": "1", "KindId": item['KindId'], "place":"mouth"})]) > 0:
+    InstanseQDB = GeneralConnection.execute(
+        "SELECT * FROM QDB WHERE nameofsymp='water' AND state='1' ")
+
+    for item in InstanseQDB:
+        InstanseADB = GeneralConnection.execute(
+            "SELECT * FROM ADB WHERE state='1' AND KindId='{}' AND place='mouth' ".format(item[TablesSchima['QDB']['KindId']]))
+
+
+        if len([CheckExist for CheckExist in InstanseADB]) > 0:
             for x in range(1,6):
                 GPIO.output(PortsConfig["water_mouth_pin"], 1)
                 sleep(sleepConfigTimer["BloodWater_MotorDelay"])

@@ -6,8 +6,9 @@ from model.DbContext import *
 
  
 def ResetAdb():
-    for item in InstanseADB.find():
-        InstanseADB.delete_many(item)
+    GeneralConnection.cursor().execute("DELETE FROM ADB ")
+
+    GeneralConnection.commit()
 
 def F_Reset():
    

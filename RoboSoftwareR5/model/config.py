@@ -1,7 +1,44 @@
 connection={
-    "connectionstring": "mongodb://localhost:27017"
+    "connectionstring": "./rdb.db"
 }
 
+TablesSchima = {
+    "QDB": {
+    "nameofsymp": 0,
+	"answer": 1,
+	"question": 2,
+	"state": 3,
+	"SymptomId": 4,
+	"KindId": 5,
+	"id": 6,
+    },
+    "ODB": {
+        "Id": 0,
+        "OrganName": 1,
+    },
+    "EDB": {
+	"Id": 0,
+	"effectorName": 1,
+	"effectorType": 2,
+    },
+    "BDB": {
+
+	"SympId": 0,
+	"effectorName": 1,
+	"place": 2,
+	"type_effector": 3,
+	"EffectorId": 4,
+	"blockId": 5,
+	"id": 6,
+    },
+    "ADB": {
+	"state": 0,
+	"KindId": 1,
+	"place": 2,
+	"id": 3, }
+
+
+}
 PortsConfig={
     
     "eye_pin" : 17,

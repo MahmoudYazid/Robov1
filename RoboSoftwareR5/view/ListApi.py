@@ -1,11 +1,13 @@
 from model.DbContext import *
 from model.Variable import *
-
+from model.config import *
 
 def GetQuestions():
-    for data in InstanseEDB.find():
+    
+    GetQuestions = GeneralConnection.cursor().execute("SELECT * FROM EDB ")
+    for data in GetQuestions:
         
-        Qlist.append(data['effectorName'])
+        Qlist.append(data[TablesSchima['EDB']['effectorName']])
     
 
 #implementFunc

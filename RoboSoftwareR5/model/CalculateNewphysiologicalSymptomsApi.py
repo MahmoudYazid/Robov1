@@ -1,24 +1,25 @@
 from model.DbContext import *
-def GetInvertedArr(FindResults):
-    return [int(FindResults['state'])*-1, int(FindResults['KindId'])]
-
-
-def GetoriginArr(FindResults):
-    return [int(FindResults['state']), int(FindResults['KindId'])]
-
+from model.config import *
 
 def F_CalculateNewPhysiologicalSymptoms():
-    for ADBItem in InstanseADB.find():
-        inverted = GetInvertedArr(ADBItem)
-        origin = GetoriginArr(ADBItem)
- 
-        if len([Item for Item in InstanseADB.find({"state": "{}".format(inverted[0]), "KindId":"{}".format(inverted[1])})]) > 0:
-        
-            InstanseADB.delete_many({"state": "{}".format(inverted[0]), "KindId":"{}".format(inverted[1])})
-        
-            InstanseADB.delete_many({"state": "{}".format(origin[0]), "KindId":"{}".format(origin[1])})
-        else:
-            continue
+    for itr in range(0,20):
+        InstanseADB = GeneralConnection.execute("SELECT * FROM ADB ")
+
+        for ADBItem in InstanseADB:
+            inverted = [int(ADBItem[TablesSchima['ADB']['state']])*-1,
+                        int(ADBItem[TablesSchima['ADB']['KindId']])]
+            origin = [int(ADBItem[TablesSchima['ADB']['state']]),int(ADBItem[TablesSchima['ADB']['KindId']])]
+          
+            Checkexistnece = GeneralConnection.execute("SELECT * FROM ADB WHERE state='{}' AND KindId='{}' ".format(inverted[0], inverted[1]))
+
+            if len([Item for Item in Checkexistnece]) > 0:
+            
+                GeneralConnection.execute("DELETE FROM ADB WHERE state='{}' AND KindId='{}' ".format(origin[0], origin[1]))
+                GeneralConnection.commit()
+                GeneralConnection.execute("DELETE FROM ADB WHERE state='{}' AND KindId='{}' ".format(inverted[0], inverted[1]))
+                GeneralConnection.commit()
+            else:
+                continue
     return 0
 
 

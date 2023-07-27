@@ -1,0 +1,418 @@
+[
+ {
+   "SympId": 45,
+   "effectorName": "cold",
+   "place": "head",
+   "type_effector": "disease",
+   "EffectorId": 0,
+   "blockId": 1
+ },
+ {
+   "SympId": 42,
+   "effectorName": "cold",
+   "place": "nose",
+   "type_effector": "disease",
+   "EffectorId": 0,
+   "blockId": 2
+ },
+ {
+   "SympId": 6,
+   "effectorName": "cold",
+   "place": "head",
+   "type_effector": "disease",
+   "EffectorId": 0,
+   "blockId": 3
+ },
+ {
+   "SympId": 46,
+   "effectorName": "paracetamol",
+   "place": "head",
+   "type_effector": "drug",
+   "EffectorId": 23,
+   "blockId": 4
+ },
+ {
+   "SympId": 44,
+   "effectorName": "paracetamol",
+   "place": "nose",
+   "type_effector": "drug",
+   "EffectorId": 23,
+   "blockId": 5
+ },
+ {
+   "SympId": 7,
+   "effectorName": "paracetamol",
+   "place": "head",
+   "type_effector": "drug",
+   "EffectorId": 23,
+   "blockId": 6
+ },
+ {
+   "SympId": 3,
+   "effectorName": "corticosteroid",
+   "place": "nose",
+   "type_effector": "drug",
+   "EffectorId": 24,
+   "blockId": 7
+ },
+ {
+   "SympId": 5,
+   "effectorName": "asthma",
+   "place": "nose",
+   "type_effector": "disease",
+   "EffectorId": 3,
+   "blockId": 8
+ },
+ {
+   "SympId": 17,
+   "effectorName": "mydriasis",
+   "place": "eye",
+   "type_effector": "disease",
+   "EffectorId": 1,
+   "blockId": 9
+ },
+ {
+   "SympId": 15,
+   "effectorName": "oxycodone",
+   "place": "eye",
+   "type_effector": "drug",
+   "EffectorId": 25,
+   "blockId": 10
+ },
+ {
+   "SympId": 36,
+   "effectorName": "hypertension",
+   "place": "head",
+   "type_effector": "disease",
+   "EffectorId": 4,
+   "blockId": 11
+ },
+ {
+   "SympId": 6,
+   "effectorName": "hypertension",
+   "place": "head",
+   "type_effector": "disease",
+   "EffectorId": 4,
+   "blockId": 12
+ },
+ {
+   "SympId": 37,
+   "effectorName": "Captopril",
+   "place": "head",
+   "type_effector": "drug",
+   "EffectorId": 26,
+   "blockId": 13
+ },
+ {
+   "SympId": 7,
+   "effectorName": "Captopril",
+   "place": "head",
+   "type_effector": "drug",
+   "EffectorId": 26,
+   "blockId": 14
+ },
+ {
+   "SympId": 15,
+   "effectorName": "myosis",
+   "place": "eye",
+   "type_effector": "disease",
+   "EffectorId": 2,
+   "blockId": 15
+ },
+ {
+   "SympId": 17,
+   "effectorName": "Cocaine",
+   "place": "eye",
+   "type_effector": "drug",
+   "EffectorId": 27,
+   "blockId": 16
+ },
+ {
+   "SympId": 37,
+   "effectorName": "hypotension",
+   "place": "head",
+   "type_effector": "disease",
+   "EffectorId": 5,
+   "blockId": 17
+ },
+ {
+   "SympId": 6,
+   "effectorName": "hypotension",
+   "place": "head",
+   "type_effector": "disease",
+   "EffectorId": 5,
+   "blockId": 18
+ },
+ {
+   "SympId": 7,
+   "effectorName": "midodrine",
+   "place": "head",
+   "type_effector": "drug",
+   "EffectorId": 28,
+   "blockId": 19
+ },
+ {
+   "SympId": 37,
+   "effectorName": "midodrine",
+   "place": "head",
+   "type_effector": "drug",
+   "EffectorId": 28,
+   "blockId": 20
+ },
+ {
+   "SympId": 41,
+   "effectorName": " IV fluids",
+   "place": "mouth",
+   "type_effector": "drug",
+   "EffectorId": 29,
+   "blockId": 21
+ },
+ {
+   "SympId": 39,
+   "effectorName": "bloody vomiting",
+   "place": "mouth",
+   "type_effector": "disease",
+   "EffectorId": 6,
+   "blockId": 22
+ },
+ {
+   "SympId": 41,
+   "effectorName": "diphenhydramine",
+   "place": "nose",
+   "type_effector": "drug",
+   "EffectorId": 40,
+   "blockId": 23
+ },
+ {
+   "SympId": 39,
+   "effectorName": "bloody Rhinorrhea",
+   "place": "nose",
+   "type_effector": "disease",
+   "EffectorId": 7,
+   "blockId": 24
+ },
+ {
+   "SympId": 34,
+   "effectorName": "insulin",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 31,
+   "blockId": 25
+ },
+ {
+   "SympId": 33,
+   "effectorName": "hyperglycemia",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 9,
+   "blockId": 26
+ },
+ {
+   "SympId": 33,
+   "effectorName": "glucose",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 32,
+   "blockId": 27
+ },
+ {
+   "SympId": 34,
+   "effectorName": "hypoglycemia",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 10,
+   "blockId": 28
+ },
+ {
+   "SympId": 11,
+   "effectorName": "valproate",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 33,
+   "blockId": 29
+ },
+ {
+   "SympId": 9,
+   "effectorName": "convulsion",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 11,
+   "blockId": 30
+ },
+ {
+   "SympId": 44,
+   "effectorName": "dimenhydrinate",
+   "place": "mouth",
+   "type_effector": "drug",
+   "EffectorId": 34,
+   "blockId": 31
+ },
+ {
+   "SympId": 42,
+   "effectorName": "vomiting",
+   "place": "mouth",
+   "type_effector": "disease",
+   "EffectorId": 12,
+   "blockId": 32
+ },
+ {
+   "SympId": 22,
+   "effectorName": "sildenafil citrate",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 35,
+   "blockId": 33
+ },
+ {
+   "SympId": 21,
+   "effectorName": "sexual dysfunction",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 13,
+   "blockId": 34
+ },
+ {
+   "SympId": 14,
+   "effectorName": "insomnia",
+   "place": "eye",
+   "type_effector": "disease",
+   "EffectorId": 14,
+   "blockId": 35
+ },
+ {
+   "SympId": 12,
+   "effectorName": "temazepam",
+   "place": "eye",
+   "type_effector": "drug",
+   "EffectorId": 36,
+   "blockId": 36
+ },
+ {
+   "SympId": 12,
+   "effectorName": "Hypersomnia",
+   "place": "eye",
+   "type_effector": "disease",
+   "EffectorId": 15,
+   "blockId": 37
+ },
+ {
+   "SympId": 14,
+   "effectorName": "modafinil",
+   "place": "eye",
+   "type_effector": "drug",
+   "EffectorId": 37,
+   "blockId": 38
+ },
+ {
+   "SympId": 42,
+   "effectorName": "Rhinorrhea",
+   "place": "nose",
+   "type_effector": "disease",
+   "EffectorId": 16,
+   "blockId": 39
+ },
+ {
+   "SympId": 44,
+   "effectorName": "phenylephrine",
+   "place": "nose",
+   "type_effector": "drug",
+   "EffectorId": 38,
+   "blockId": 40
+ },
+ {
+   "SympId": 3,
+   "effectorName": "Hyperreactive airway",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 17,
+   "blockId": 41
+ },
+ {
+   "SympId": 5,
+   "effectorName": "Benzodiazepines",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 39,
+   "blockId": 42
+ },
+ {
+   "SympId": 18,
+   "effectorName": "hypersenstivity",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 18,
+   "blockId": 43
+ },
+ {
+   "SympId": 19,
+   "effectorName": "diphenhydramine",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 40,
+   "blockId": 44
+ },
+ {
+   "SympId": 25,
+   "effectorName": "constipation",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 19,
+   "blockId": 45
+ },
+ {
+   "SympId": 24,
+   "effectorName": "bisacodyl",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 41,
+   "blockId": 46
+ },
+ {
+   "SympId": 24,
+   "effectorName": "diarrhea",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 20,
+   "blockId": 47
+ },
+ {
+   "SympId": 25,
+   "effectorName": "loperamide",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 42,
+   "blockId": 48
+ },
+ {
+   "SympId": 27,
+   "effectorName": "increase urenation",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 21,
+   "blockId": 49
+ },
+ {
+   "SympId": 28,
+   "effectorName": "tolterodine",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 43,
+   "blockId": 50
+ },
+ {
+   "SympId": 28,
+   "effectorName": "decrease urination",
+   "place": "abdominal",
+   "type_effector": "disease",
+   "EffectorId": 22,
+   "blockId": 51
+ },
+ {
+   "SympId": 27,
+   "effectorName": "Darifenacin",
+   "place": "abdominal",
+   "type_effector": "drug",
+   "EffectorId": 44,
+   "blockId": 52
+ }
+]

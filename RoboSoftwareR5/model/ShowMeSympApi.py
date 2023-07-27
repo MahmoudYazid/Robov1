@@ -7,8 +7,8 @@ from model.HypertenstionApi import *
 from model.hyperthermiaApi import *
 from model.HypoRespApi import *
 from model.HypotensionApi import *
-from model.PigmentationApi import *
 from model.WaterFluidApi import *
+from model.DbContext import *
 def F_ShowMeTheSym():
     NasalBloodFluidApi()
     MouthBloodFluidApi()
@@ -21,7 +21,6 @@ def F_ShowMeTheSym():
     F_HyperThermia()
     F_HypoBreathApi()
     HypotenstionMainApi()
-    F_pigmentationApi()
     F_MouthWaterFluidApi()
     F_NasalWaterFluidApi()
 

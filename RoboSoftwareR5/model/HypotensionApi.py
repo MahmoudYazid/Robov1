@@ -1,44 +1,33 @@
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
+
+from model.DbContext import *
 
 
-last_x = 0
-last_y = 0
-cycle_no = 0
-y_hypo = [0, 0, 1, 1, -1, .5, .5, -5, 7, 8, 9, -.5, -2]
 
-fig = plt.figure(figsize=(6, 3))
-x = [0]
-y = [0]
-
-ln, = plt.plot(x, y, '-')
-plt.axis([0, 100, 0, 100])
-
-
-def update_hyper_bp(frame):
-    global last_x
-    global last_y
-    global cycle_no
-    x.append(last_x)
-    last_x = last_x+1
-
-    # y
-    y.append(y_hypo[last_y])
-    last_y = last_y+1
-    cycle_no = cycle_no+1
-    if y_hypo[last_y-1] == -2 and cycle_no == len(y_hypo):
-        cycle_no = 0
-        last_y = 0
-    ln.set_data(x, y)
-    if (last_x == 100):
-        plt.close(fig)
-
-    return ln,
 
 def HypotenstionMainApi():
-    for item in InstanseQDB.find({"nameofsymp": "BP", "state": "-1"}):
-        if len([CheckExist for CheckExist in InstanseADB.find({"state": "-1", "KindId": item['KindId']})]) > 0:
-            animation = FuncAnimation(fig, update_hyper_bp, interval=150)
+   
+    InstanseQDB = GeneralConnection.execute(
+        "SELECT * FROM QDB WHERE nameofsymp='BP' AND state='-1' ")
+    for item in InstanseQDB:
+        InstanseADB = GeneralConnection.execute(
+            "SELECT * FROM ADB WHERE state='-1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+
+        if len([CheckExist for CheckExist in InstanseADB]) > 0:
+
+            x = [x for x in range(0, 200)]
+
+            y = [x for y in range(0, 20) for x in [0, .1, 0, .1, .2, -.2, 0, 0, 0,0]]
+            print(y )
+        
+          
+
+
+            plt.plot(x, y, label='ECG')
+            plt.xlabel('Time (seconds)')
+            plt.ylabel('Amplitude')
+            plt.title('Synthetic ECG Signal')
+            plt.legend()
+            plt.grid(True)
             plt.show()
-
-
+            

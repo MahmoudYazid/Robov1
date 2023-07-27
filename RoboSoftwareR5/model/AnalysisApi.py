@@ -10,9 +10,12 @@ import numpy as np
 
 def F_GluAnalysis(self):
 	Signal=0
-
-	for item in InstanseQDB.find({"nameofsymp":"glucose","state":"-1"}):
-		if len([CheckExist for CheckExist in InstanseADB.find({"state": "-1", "KindId": item['KindId']})])>0:
+	InstanseQDB = GeneralConnection.execute(
+		"SELECT * FROM QDB WHERE nameofsymp='glucose' AND state='-1' ")
+	for item in InstanseQDB:
+		InstanseADB = GeneralConnection.execute(
+			"SELECT * FROM ADB WHERE state='-1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+		if len([CheckExist for CheckExist in InstanseADB])>0:
 			Signal=1
 			self.AnalysisScreenList.addItem(
 				"A1C Test" + " "+"{}".format(random.uniform(0, 2.5))+"%")
@@ -20,8 +23,16 @@ def F_GluAnalysis(self):
                                    " "+"{}".format(np.random.randint(30, 50))+"mg/dL")
 			self.AnalysisScreenList.addItem("Glucose Tolerance Test" +
                                    " "+"{}".format(np.random.randint(30, 50))+"mg/dL")
-	for item in InstanseQDB.find({"nameofsymp": "glucose", "state": "1"}):
-		if len([CheckExist for CheckExist in InstanseADB.find({"state": "1", "KindId": item['KindId']})])>0:
+	
+	InstanseQDB2 = GeneralConnection.execute(
+		"SELECT * FROM QDB WHERE nameofsymp='glucose' AND state='1' ")
+
+	for item in InstanseQDB2:
+		InstanseADB = GeneralConnection.execute(
+			"SELECT * FROM ADB WHERE state='1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+	
+
+		if len([CheckExist for CheckExist in InstanseADB])>0:
 			Signal=1
 			self.AnalysisScreenList.addItem(
 			    "A1C Test" + " "+"{}".format(random.uniform(6.5, 10))+"%")
@@ -46,8 +57,15 @@ def F_GluAnalysis(self):
 def F_BloodPressureAnalysis(self):
 	Signal = 0
 
-	for item in InstanseQDB.find({"nameofsymp":"BP", "state":"-1"}):
-		if len([CheckExist for CheckExist in InstanseADB.find({"state":"-1", "KindId": item['KindId']})]) > 0:
+
+	InstanseQDB = GeneralConnection.execute(
+            "SELECT * FROM QDB WHERE nameofsymp='BP' AND state='-1' ")
+
+	for item in InstanseQDB:
+		InstanseADB=GeneralConnection.execute(
+                    "SELECT * FROM ADB WHERE state='-1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+
+		if len([CheckExist for CheckExist in InstanseADB]) > 0:
 			Signal = 1
 			self.AnalysisScreenList.addItem(
                             "Blood pressure Test" + " " +
@@ -55,8 +73,14 @@ def F_BloodPressureAnalysis(self):
                             "{}".format(np.random.randint(40,60)) + ".")
 
 	
-	for item in InstanseQDB.find({"nameofsymp": "BP", "state": "1"}):
-		if len([CheckExist for CheckExist in InstanseADB.find({"state": "1", "KindId": item['KindId']})]) > 0:
+	InstanseQDB2 = GeneralConnection.execute(
+            "SELECT * FROM QDB WHERE nameofsymp='BP' AND state='1' ")
+
+	for item in InstanseQDB2:
+		InstanseADB = GeneralConnection.execute(
+                    "SELECT * FROM ADB WHERE state='1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
+
+		if len([CheckExist for CheckExist in InstanseADB]) > 0:
 
 			Signal = 1
 			self.AnalysisScreenList.addItem("Blood pressure Test" + " "+"{}/{}".format(np.random.randint(140, 200), np.random.randint(90, 150))) 

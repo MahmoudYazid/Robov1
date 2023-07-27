@@ -9,6 +9,7 @@ from model.SoundApi import *
 from model.Variable import *
 from model.AnalysisApi import *
 from model.ShowMeSympApi import *
+from model.Ecg import *
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -50,6 +51,7 @@ class Ui_MainWindow(object):
         self.EffectorComboBox.setObjectName("EffectorComboBox")
         self.EffectorComboBox.addItems(QlistUniqueValue)
         self.gridLayout.addWidget(self.EffectorComboBox, 2, 0, 1, 1)
+        
         self.resetBtm = QtWidgets.QPushButton(self.gridLayoutWidget)
         self.resetBtm.setStyleSheet(
                                     "\n"
@@ -57,6 +59,23 @@ class Ui_MainWindow(object):
         self.resetBtm.setObjectName("resetBtm")
         self.resetBtm.pressed.connect(self.F_ResetBtm)
         self.gridLayout.addWidget(self.resetBtm, 5, 0, 1, 1)
+
+        #### ecg
+        self.ECGBTM = QtWidgets.QPushButton(self.gridLayoutWidget)
+        self.ECGBTM.setStyleSheet(
+            "\n"
+            "background-color: rgb(119, 204, 233);")
+        self.ECGBTM.setObjectName("OPEN ECG")
+        self.ECGBTM.pressed.connect(self.F_OPENECG)
+        self.gridLayout.addWidget(self.ECGBTM, 7, 0, 1, 1)
+
+
+
+
+        ##
+
+
+
         self.ordersScreenList = QtWidgets.QListWidget(self.gridLayoutWidget)
         self.ordersScreenList.setStyleSheet("color: rgb(0, 0, 0);\n"
                                             "background-color: rgb(243, 247, 255);\n"
@@ -107,7 +126,9 @@ class Ui_MainWindow(object):
         self.resetBtm.setText(_translate("MainWindow", "reset"))
         self.tellmeBtm.setText(_translate("MainWindow", "tell me"))
         self.ShowmeBtm.setText(_translate("MainWindow", "Show me"))
-    
+        
+        self.ECGBTM.setText(_translate("MainWindow", "OPEN ECG"))
+
     def F_PushBtm(self):
        
         self.ordersScreenList.addItem(" {} You Push Effector {} ....".format(datetime.now(),
@@ -128,7 +149,16 @@ class Ui_MainWindow(object):
      
         F_ShowMeTheSym()
         return 0
-    
+
+    def F_OPENECG(self):
+        self.ordersScreenList.addItem(
+            " {} OPEN ECG ORDER".format(datetime.now()))
+        self.ordersScreenList.addItem(
+            " {} OPEN ECG ORDER".format(datetime.now()))
+        openEcg()
+     
+        
+        return 0
     def F_TellMeBtm(self): 
         self.ordersScreenList.addItem("{} Tell me the feeling order".format(datetime.now()))
         self.ordersScreenList.addItem(tell_Me_the_Feeling())

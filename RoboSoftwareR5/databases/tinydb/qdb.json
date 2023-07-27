@@ -1,0 +1,386 @@
+[
+ {
+   "nameofsymp": "hear",
+   "answer": "i can see you talk but i cant hear you",
+   "question": "can you hear me well",
+   "state": -1,
+   "SymptomId": 0,
+   "KindId": 0
+ },
+ {
+   "nameofsymp": "hear",
+   "answer": "yes i can here you well doc",
+   "question": "can you hear me well",
+   "state": 0,
+   "SymptomId": 1,
+   "KindId": 0
+ },
+ {
+   "nameofsymp": "hear",
+   "answer": "yes i can here you well doc",
+   "question": "can you hear me well",
+   "state": 1,
+   "SymptomId": 2,
+   "KindId": 0
+ },
+ {
+   "nameofsymp": "respiration",
+   "answer": "i dont know my respiratory is so fast right now",
+   "question": "do you feel any problem in breathing",
+   "state": 1,
+   "SymptomId": 3,
+   "KindId": 1
+ },
+ {
+   "nameofsymp": "respiration",
+   "answer": "my breathing is well",
+   "question": "do you feel any problem in breathing",
+   "state": 0,
+   "SymptomId": 4,
+   "KindId": 1
+ },
+ {
+   "nameofsymp": "respiration",
+   "answer": "i cant take my breath",
+   "question": "do you feel any problem in breathing",
+   "state": -1,
+   "SymptomId": 5,
+   "KindId": 1
+ },
+ {
+   "nameofsymp": "ache",
+   "answer": "yes doctor there is pain in ((organ))",
+   "question": "do you feel pain here",
+   "state": 1,
+   "SymptomId": 6,
+   "KindId": 2
+ },
+ {
+   "nameofsymp": "ache",
+   "answer": "no i dont feel anything ((organ))",
+   "question": "do you feel pain here",
+   "state": -1,
+   "SymptomId": 7,
+   "KindId": 2
+ },
+ {
+   "nameofsymp": "ache",
+   "answer": "no i dont feel anything ",
+   "question": "do you feel pain here",
+   "state": 0,
+   "SymptomId": 8,
+   "KindId": 2
+ },
+ {
+   "nameofsymp": "move",
+   "answer": "yes i think i cant stop move this",
+   "question": "can you move this ",
+   "state": 1,
+   "SymptomId": 9,
+   "KindId": 3
+ },
+ {
+   "nameofsymp": "move",
+   "answer": "yes i think i can move this well ",
+   "question": "can you move this ",
+   "state": 0,
+   "SymptomId": 10,
+   "KindId": 3
+ },
+ {
+   "nameofsymp": "move",
+   "answer": "no doctor i cant move ",
+   "question": "can you move this ",
+   "state": -1,
+   "SymptomId": 11,
+   "KindId": 3
+ },
+ {
+   "nameofsymp": "sleep ",
+   "answer": "in these days iam sleeping so much",
+   "question": "do you sleep well",
+   "state": 1,
+   "SymptomId": 12,
+   "KindId": 4
+ },
+ {
+   "nameofsymp": "sleep ",
+   "answer": "i have regular sleep doctor",
+   "question": "do you sleep well",
+   "state": 0,
+   "SymptomId": 13,
+   "KindId": 4
+ },
+ {
+   "nameofsymp": "sleep ",
+   "answer": "i cant sleep so much at night",
+   "question": "do you sleep well",
+   "state": -1,
+   "SymptomId": 14,
+   "KindId": 4
+ },
+ {
+   "nameofsymp": "eye",
+   "answer": "i dont think i can see you well doctor",
+   "question": "can you see me well ",
+   "state": -1,
+   "SymptomId": 15,
+   "KindId": 5
+ },
+ {
+   "nameofsymp": "eye",
+   "answer": "i can see you well",
+   "question": "can you see me well ",
+   "state": 0,
+   "SymptomId": 16,
+   "KindId": 5
+ },
+ {
+   "nameofsymp": "eye",
+   "answer": "i can see every thing blur ",
+   "question": "can you see me well ",
+   "state": 1,
+   "SymptomId": 17,
+   "KindId": 5
+ },
+ {
+   "nameofsymp": "pigmentation",
+   "answer": "i dont know but ((organ)) has some changes in its colour ",
+   "question": "is there any skin issues",
+   "state": 1,
+   "SymptomId": 18,
+   "KindId": 6
+ },
+ {
+   "nameofsymp": "pigmentation",
+   "answer": "no there isnt any thing i my skin ",
+   "question": "is there any skin issues",
+   "state": -1,
+   "SymptomId": 19,
+   "KindId": 6
+ },
+ {
+   "nameofsymp": "pigmentation",
+   "answer": "no there isnt any thing i my skin ",
+   "question": "is there any skin issues",
+   "state": 0,
+   "SymptomId": 20,
+   "KindId": 6
+ },
+ {
+   "nameofsymp": "sexual",
+   "answer": "i dont like to talk about this doc but i think i have some sex function  issue",
+   "question": "tell me about your sexual life style",
+   "state": -1,
+   "SymptomId": 21,
+   "KindId": 7
+ },
+ {
+   "nameofsymp": "sexual",
+   "answer": "no i think iam doing well in my sexual intercoast",
+   "question": "tell me about your sexual life style",
+   "state": 1,
+   "SymptomId": 22,
+   "KindId": 7
+ },
+ {
+   "nameofsymp": "sexual",
+   "answer": "no i think iam doing well in my sexual intercoast",
+   "question": "tell me about your sexual life style",
+   "state": 0,
+   "SymptomId": 23,
+   "KindId": 7
+ },
+ {
+   "nameofsymp": "feces",
+   "answer": "i think my feces its large in quantity ",
+   "question": "do you have any problems in the pathroom ",
+   "state": 1,
+   "SymptomId": 24,
+   "KindId": 8
+ },
+ {
+   "nameofsymp": "feces",
+   "answer": "i think my feces  its small in quantity ",
+   "question": "do you have any problems in the pathroom ",
+   "state": -1,
+   "SymptomId": 25,
+   "KindId": 8
+ },
+ {
+   "nameofsymp": "feces",
+   "answer": "i think my feces  its intact in quantity ",
+   "question": "do you have any problems in the pathroom ",
+   "state": 0,
+   "SymptomId": 26,
+   "KindId": 8
+ },
+ {
+   "nameofsymp": "urination",
+   "answer": "my urine  i think its large  quantity",
+   "question": "do you have any problems in the pathroom ",
+   "state": 1,
+   "SymptomId": 27,
+   "KindId": 9
+ },
+ {
+   "nameofsymp": "urination",
+   "answer": "my urine i think its small  quantity",
+   "question": "do you have any problems in the pathroom ",
+   "state": -1,
+   "SymptomId": 28,
+   "KindId": 9
+ },
+ {
+   "nameofsymp": "urination",
+   "answer": "my urine i think its intact in quantity",
+   "question": "do you have any problems in the pathroom ",
+   "state": 0,
+   "SymptomId": 29,
+   "KindId": 9
+ },
+ {
+   "nameofsymp": "weight",
+   "answer": "my weight is inceasing so much these days",
+   "question": "is there any problem in your weight ",
+   "state": 1,
+   "SymptomId": 30,
+   "KindId": 10
+ },
+ {
+   "nameofsymp": "weight",
+   "answer": "my weight is decreasig so much these days",
+   "question": "is there any problem in your weight ",
+   "state": -1,
+   "SymptomId": 31,
+   "KindId": 10
+ },
+ {
+   "nameofsymp": "weight",
+   "answer": "my weight is stable  these days",
+   "question": "is there any problem in your weight ",
+   "state": 0,
+   "SymptomId": 32,
+   "KindId": 10
+ },
+ {
+   "nameofsymp": "glucose",
+   "answer": "i think i have a family history of increase glucose level ....doctor",
+   "question": "do you have any family history of diabetic",
+   "state": 1,
+   "SymptomId": 33,
+   "KindId": 11
+ },
+ {
+   "nameofsymp": "glucose",
+   "answer": "i think i have a family history of decreasing glucose level i think my uncle was like this",
+   "question": "do you have any family history of diabetic",
+   "state": -1,
+   "SymptomId": 34,
+   "KindId": 11
+ },
+ {
+   "nameofsymp": "glucose",
+   "answer": "i think my glucose is stable some  of my family has diabetes but i dont have any issues",
+   "question": "do you have any family history of diabetic",
+   "state": 0,
+   "SymptomId": 35,
+   "KindId": 11
+ },
+ {
+   "nameofsymp": "BP",
+   "answer": "i dont know doctor .. you can measure it and tell me",
+   "question": "what about your bp",
+   "state": 1,
+   "SymptomId": 36,
+   "KindId": 12
+ },
+ {
+   "nameofsymp": "BP",
+   "answer": "i dont know doctor .. you can measure it and tell me",
+   "question": "what about your bp",
+   "state": -1,
+   "SymptomId": 37,
+   "KindId": 12
+ },
+ {
+   "nameofsymp": "BP",
+   "answer": "i dont know doctor .. you can measure it and tell me",
+   "question": "what about your bp",
+   "state": 0,
+   "SymptomId": 38,
+   "KindId": 12
+ },
+ {
+   "nameofsymp": "blood",
+   "answer": "there are blood come from my ((organ))",
+   "question": "is there any blood came out",
+   "state": 1,
+   "SymptomId": 39,
+   "KindId": 13
+ },
+ {
+   "nameofsymp": "blood",
+   "answer": "i dont think there is any blood come from my ((organ))",
+   "question": "is there any blood came out",
+   "state": 0,
+   "SymptomId": 40,
+   "KindId": 13
+ },
+ {
+   "nameofsymp": "blood",
+   "answer": "i dont think that ((organ)) execrete any thing from my born doctor ",
+   "question": "is there any blood came out",
+   "state": -1,
+   "SymptomId": 41,
+   "KindId": 13
+ },
+ {
+   "nameofsymp": "water",
+   "answer": "there are water come from my ((organ))",
+   "question": "is there any water came out",
+   "state": 1,
+   "SymptomId": 42,
+   "KindId": 14
+ },
+ {
+   "nameofsymp": "water",
+   "answer": "i dont think there is any water come from my ((organ))",
+   "question": "is there any water came out",
+   "state": 0,
+   "SymptomId": 43,
+   "KindId": 14
+ },
+ {
+   "nameofsymp": "water",
+   "answer": "i dont think that ((organ)) execrete any thing from my born doctor ",
+   "question": "is there any water came out",
+   "state": -1,
+   "SymptomId": 44,
+   "KindId": 14
+ },
+ {
+   "nameofsymp": "heat",
+   "answer": "yes i feel worm",
+   "question": "do you feel worming",
+   "state": 1,
+   "SymptomId": 45,
+   "KindId": 15
+ },
+ {
+   "nameofsymp": "heat",
+   "answer": "i feel cold",
+   "question": "do you feel worming",
+   "state": -1,
+   "SymptomId": 46,
+   "KindId": 15
+ },
+ {
+   "nameofsymp": "heat",
+   "answer": "i feel normal",
+   "question": "do you feel worming",
+   "state": 0,
+   "SymptomId": 47,
+   "KindId": 15
+ }
+]
