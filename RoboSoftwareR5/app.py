@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
             "background-color: rgb(119, 204, 233);")
         self.ECGBTM.setObjectName("OPEN ECG")
         self.ECGBTM.pressed.connect(self.F_OPENECG)
-        self.gridLayout.addWidget(self.ECGBTM, 7, 0, 1, 1)
+        self.gridLayout.addWidget(self.ECGBTM, 8, 0, 1, 1)
 
 
 
