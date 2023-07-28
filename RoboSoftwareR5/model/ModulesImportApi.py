@@ -1,7 +1,7 @@
 from model.AnalysisApi import *
 from model.SoundApi import *
 from datetime import datetime
-from PyQt5 import QtCore, QtGui, QtWidgets
+
 from model.ResetAPI import *
 from model.DrugDiseaseInteractionApi import *
 from view.ListApi import *
@@ -14,7 +14,7 @@ import numpy as np
 import random
 from model.Variable import *
 
-from pymongo import *
+
 import gpio as GPIO
 
 

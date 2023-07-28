@@ -7,7 +7,9 @@ from model.config import *
 from model.Variable import *
 import random
 import numpy as np
-
+import tkinter as tk
+from tkinter import ttk
+from datetime import datetime
 def F_GluAnalysis(self):
 	Signal=0
 	InstanseQDB = GeneralConnection.execute(
@@ -17,11 +19,11 @@ def F_GluAnalysis(self):
 			"SELECT * FROM ADB WHERE state='-1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
 		if len([CheckExist for CheckExist in InstanseADB])>0:
 			Signal=1
-			self.AnalysisScreenList.addItem(
+			self.AnalysisScreenList.insert(
 				"A1C Test" + " "+"{}".format(random.uniform(0, 2.5))+"%")
-			self.AnalysisScreenList.addItem("Fasting Blood Sugar Test" +
+			self.AnalysisScreenList.insert(tk.END, "Fasting Blood Sugar Test" +
                                    " "+"{}".format(np.random.randint(30, 50))+"mg/dL")
-			self.AnalysisScreenList.addItem("Glucose Tolerance Test" +
+			self.AnalysisScreenList.insert(tk.END, "Glucose Tolerance Test" +
                                    " "+"{}".format(np.random.randint(30, 50))+"mg/dL")
 	
 	InstanseQDB2 = GeneralConnection.execute(
@@ -34,23 +36,23 @@ def F_GluAnalysis(self):
 
 		if len([CheckExist for CheckExist in InstanseADB])>0:
 			Signal=1
-			self.AnalysisScreenList.addItem(
+			self.AnalysisScreenList.insert(tk.END,
 			    "A1C Test" + " "+"{}".format(random.uniform(6.5, 10))+"%")
 
-			self.AnalysisScreenList.addItem("Fasting Blood Sugar Test" + " " +
+			self.AnalysisScreenList.insert(tk.END,"Fasting Blood Sugar Test" + " " +
                                    "{}".format(np.random.randint(126, 130))+"mg/dL")
 
-			self.AnalysisScreenList.addItem("Glucose Tolerance Test" + " " +
+			self.AnalysisScreenList.insert(tk.END,"Glucose Tolerance Test" + " " +
                                    "{}".format(np.random.randint(200, 250))+"mg/dL")
 	if Signal==0:
 		
-		self.AnalysisScreenList.addItem(
+		self.AnalysisScreenList.insert(tk.END,
 				"A1C Test" + " "+"{}".format(random.uniform(3, 5.6))+"%")
 
-		self.AnalysisScreenList.addItem("Fasting Blood Sugar Test" +
+		self.AnalysisScreenList.insert(tk.END,"Fasting Blood Sugar Test" +
 									" "+"{}".format(np.random.randint(70, 99))+"mg/dL")
 
-		self.AnalysisScreenList.addItem("Glucose Tolerance Test" + " " +
+		self.AnalysisScreenList.insert(tk.END, "Glucose Tolerance Test" + " " +
 									"{}".format(np.random.randint(60, 140))+"mg/dL")
 
 
@@ -67,7 +69,7 @@ def F_BloodPressureAnalysis(self):
 
 		if len([CheckExist for CheckExist in InstanseADB]) > 0:
 			Signal = 1
-			self.AnalysisScreenList.addItem(
+			self.AnalysisScreenList.insert(tk.END,
                             "Blood pressure Test" + " " +
                             "{}".format(np.random.randint(40,90)) + "/" +
                             "{}".format(np.random.randint(40,60)) + ".")
@@ -83,13 +85,12 @@ def F_BloodPressureAnalysis(self):
 		if len([CheckExist for CheckExist in InstanseADB]) > 0:
 
 			Signal = 1
-			self.AnalysisScreenList.addItem("Blood pressure Test" + " "+"{}/{}".format(np.random.randint(140, 200), np.random.randint(90, 150))) 
+			self.AnalysisScreenList.insert(tk.END,"Blood pressure Test" + " "+"{}/{}".format(np.random.randint(140, 200), np.random.randint(90, 150))) 
 
 			
 	if Signal == 0:
 
-		self.AnalysisScreenList.addItem(
-                    "Blood pressure Test" + " "+"{}/{}".format(np.random.randint(90, 120), np.random.randint(60, 80))) 
+		self.AnalysisScreenList.insert(tk.END,"Blood pressure Test" + " "+"{}/{}".format(np.random.randint(90, 120), np.random.randint(60, 80))) 
 
 		
 
@@ -100,7 +101,7 @@ def F_BloodPressureAnalysis(self):
 
 
 def AutoCheck(self):
-	self.AnalysisScreenList.clear()
+	self.AnalysisScreenList.delete(0, tk.END)
 
 	F_GluAnalysis(self=self)
 	F_BloodPressureAnalysis(self=self)
