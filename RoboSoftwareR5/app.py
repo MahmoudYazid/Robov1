@@ -19,8 +19,8 @@ class Ui_MainWindow:
         self.root = root
         root.title("RobotikV1")
         root.geometry("900x500")
-        root.minsize(900, 500)
-        root.maxsize(900, 500)
+        root.minsize(900, 600)
+        root.maxsize(900, 600)
         root.configure(bg="white")
 
         self.setup_ui()
@@ -49,7 +49,7 @@ class Ui_MainWindow:
             self.grid_frame, text="OPEN ECG", style="TButton", command=self.F_OPENECG , width=50)
         self.ECGBTM.grid(row=8, column=0, padx=5, pady=5)
 
-        self.ordersScreenList = tk.Listbox(self.grid_frame, bg="white",width=80)
+        self.ordersScreenList = tk.Listbox(self.grid_frame, bg="white",width=60)
         self.ordersScreenList.grid(row=0, column=0, rowspan=2, padx=5, pady=5)
 
         self.tellmeBtm = ttk.Button(

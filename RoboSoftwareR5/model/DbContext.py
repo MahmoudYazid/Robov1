@@ -3,7 +3,7 @@ from model.config import *
 import os.path
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db_dir = (BASE_DIR + '\\rdb.db')
+db_dir = (BASE_DIR + '//rdb.db')
 GeneralConnection = sqlite3.connect(db_dir)
 
 

@@ -68,12 +68,12 @@ DegreesConfig={
     "StopMotor":0,
     "FastMove":50,
     "EyeContract":1,
-    "EyeDilute":12
+    "EyeDilute":70
 }
 
 # PwmStart["start"]
 PwmStart={
-    "start":2.5
+    "start":50
 
 }
 

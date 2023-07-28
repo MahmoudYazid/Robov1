@@ -13,9 +13,10 @@ from model.CalculateNewphysiologicalSymptomsApi import *
 import numpy as np
 import random
 from model.Variable import *
+import RPi.GPIO as GPIO
 
 
-import gpio as GPIO
+
 
 
 import time
