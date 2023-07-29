@@ -1,8 +1,8 @@
-import matplotlib.pyplot as plt
-
 from model.DbContext import *
-
-
+import tkinter as tk
+from tkinter import ttk
+import plotly.express as px
+import plotly.graph_objects as go
 
 
 def HypotenstionMainApi():
@@ -15,19 +15,15 @@ def HypotenstionMainApi():
 
         if len([CheckExist for CheckExist in InstanseADB]) > 0:
 
-            x = [x for x in range(0, 200)]
+            xinput = [x for x in range(0, 200)]
 
-            y = [x for y in range(0, 20) for x in [0, .1, 0, .1, .2, -.2, 0, 0, 0,0]]
-            print(y )
+            yinput = [x for y in range(0, 20) for x in [0, .1, 0, .1, .2, -.2, 0, 0, 0,0]]
+            fig = go.Figure(data=go.Scatter(
+            x=xinput,
+            y=yinput
         
-          
+            ))
+            fig.show()
 
 
-            plt.plot(x, y, label='ECG')
-            plt.xlabel('Time (seconds)')
-            plt.ylabel('Amplitude')
-            plt.title('Synthetic ECG Signal')
-            plt.legend()
-            plt.grid(True)
-            plt.show()
             
