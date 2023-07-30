@@ -43,9 +43,9 @@ PortsConfig={
     
     "eye_pin" : 17,
     "blood_nose_pin" : 27,
-    "blood_mouth_pin" : 18,
-    "water_nose_pin" : 22,
-    "water_mouth_pin" : 25,
+    "blood_mouth_pin" : 22,
+    "water_nose_pin" : 25,
+    "water_mouth_pin" : 18,
 
     "act_en_pin" : 2,
     "act_dir1_pin" : 23,

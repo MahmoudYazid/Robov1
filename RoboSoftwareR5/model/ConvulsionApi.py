@@ -11,16 +11,16 @@ def F_SlowMoveApi():
             "SELECT * FROM ADB WHERE state='-1' AND KindId='{}' ".format(item[TablesSchima['QDB']['KindId']]))
 
         if len([CheckExist for CheckExist in InstanseADB]) > 0:
-
+            convulsion_motor.start(PwmStart["start"])
             for x in range(1, 6):
-                convulsion_motor.start(PwmStart["start"])
+               
 
-                GPIO.output(convulsion_dir1_pin, Digital["on"])
+                GPIO.output(PortsConfig['convulsion_dir1_pin'], Digital["on"])
 
                 convulsion_motor.ChangeDutyCycle(DegreesConfig["SlowMove"])
                 sleep(sleepConfigTimer["SlowMove_MotorDelay"])
 
-                GPIO.output(convulsion_dir1_pin, Digital["off"])
+                GPIO.output(PortsConfig['convulsion_dir1_pin'], Digital["off"])
                 convulsion_motor.ChangeDutyCycle(Digital["off"])
 
             
@@ -40,11 +40,11 @@ def F_FastMoveApi():
             convulsion_motor.start(PwmStart["start"])
             for x in range(1, 6):
                 
-                GPIO.output(convulsion_dir1_pin, Digital["on"])
+                GPIO.output(PortsConfig['convulsion_dir1_pin'], Digital["on"])
                 convulsion_motor.ChangeDutyCycle(DegreesConfig["FastMove"])
                 sleep(sleepConfigTimer["FastMove_MotorDelay"])
 
-                GPIO.output(convulsion_dir1_pin, Digital["off"])
+                GPIO.output(PortsConfig['convulsion_dir1_pin'], Digital["off"])
                 convulsion_motor.ChangeDutyCycle(Digital["off"])
             
    
